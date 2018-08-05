@@ -17,7 +17,7 @@ from googletrans import Translator
 botStart = time.time()
 #==============================================================================================================
 client = LINE ()
-#client = LINE ("EvwoIqJWB3dEg8dtrGOe.mDIRQD+WthuKlYOGL7ITRG.u0Lvk3SRkAmWEVraL0/Biz6U0/6yrTONo8g785sLA5w=")
+#client = LINE ("EvnoQt73aUUOPRwX768e.mDIRQD+WthuKlYOGL7ITRG.cy49J+4X+aWgbm95G0/siCmet43lkOmKmPdnWKcukXU="")
 #==============================================================================================================
 readOpen = codecs.open("read.json","r","utf-8")
 settingsOpen = codecs.open("temp.json","r","utf-8")
@@ -219,9 +219,9 @@ helpmsg ="""
 ╠updatename/bio 「text」
 ╠updatefoto/video
 ╠myname
-╠mypict
+╠mypict/vid
 ╠mysticker「gift sticker 1」
-╠myvid
+╠contact 「mid nya」
 ╠mycover
 ╠id/idku「@」
 ╠sc/scku「@」
@@ -247,12 +247,12 @@ helpmsg ="""
 ╠delete chat
 ╠bye 「Ruang kosong」
 ╠checkmovie
-╠memlist
+╠on 「runtime」
 ╠gcreator
 ╠asking 「text」
 ╠hello「nama」
-╠Fc「text」
-╠on 「runtime」
+╠newticket
+╠invite:on「by contact」
 ╠tag,mention/all/desah/jxxxxt
 ╠open/closeqr,ginfo「#」
 ╠itsme/about
@@ -265,7 +265,7 @@ helpmsg ="""
 ╠groupku/mygroup
 ╠infogroup/groupinfo
 ╠zodiac/ind/eng
-╠friendlist
+╠friendlist/mem
 ╠block「@」/blokir 
 ╠blocklist/listblock
 ╠today/kalender
@@ -326,7 +326,7 @@ helpmsg ="""
 ╠setread:「responmessage reader」
 ╠addresponsticker
 ╠delresponsticker
-╠setrespon:「responmessage」
+╠setrespon/group:「responmessage」
 ╠setpm:「text」
 ╠addautosticker
 ╠delautosticker
@@ -404,8 +404,8 @@ helptrans= """「 TransLator 」
 • uk : Ukrainian
 • vi : Vietnamese
 example :
-tr-en saya tampan
-say-en saya keren"""
+tr-en kamu gila
+say-en aku tidak"""
 #==============================================================================================================
 #==============================================================================================================
 #=============================================[ OPERATION STARTED ]============================================
@@ -499,7 +499,7 @@ def lineBot(op):
                     spkg = msgSticker["STKPKGID"]
                     sver = msgSticker["STKVER"]
                     sendSticker(op.param1, sver, spkg, sid)
-                sendMention(op.param1, op.param2, "Lah meninggal kan", "\n{}".format(str(settings['leavePesan'])))
+                sendMention(op.param1, op.param2, "telah meninggal kan", "{}".format(str(settings['leavePesan'])))
 
         if op.type == 17:
             print ("[ 17 ]  NOTIFIED ACCEPT GROUP INVITATION")
@@ -520,7 +520,7 @@ def lineBot(op):
                         return sendMention(op.param1, op.param2, msg[0], msg[1])
                     sendMention(op.param1, op.param2, "Haii kamu", msg)
                 else:
-                    sendMention(op.param1, op.param2, "Hi","\n{}".format(str(settings['welcomePesan'])))
+                    sendMention(op.param1, op.param2, "Haii kamu","{}".format(str(settings['welcomePesan'])))
                     contact = client.getContact(op.param2)
                     client.sendImageWithURL(op.param1,image)
                     arg = "   Group Name : {}".format(str(group.name))
@@ -673,9 +673,9 @@ def lineBot(op):
                 elif text.lower() == "author" or text.lower() == ".":
                     helpaut = helpauthor
                     client.sendMessage(to, str(helpaut))
-                elif text.lower() == "stealing" or text.lower() == ".":
-                    helpst = helpsteal
-                    client.sendMessage(to, str(helpst))
+                elif text.lower() == "bio" or text.lower() == ".":
+                    helpio = helpbio
+                    client.sendMessage(to, str(helpio))
                 elif text.lower() == "spaming" or text.lower() == ".":
                     helpsp = helpspam
                     client.sendMessage(to, str(helpsp))
@@ -1303,7 +1303,7 @@ def lineBot(op):
                     hasil = translator.translate(isi, dest='et')
                     A = hasil.text
                     client.sendMessage(msg.to, A)
-                elif msg.text.lower().startswith("tr-fi "):
+                elif msg.text.lower().startswith("tr-fi ")
                     sep = text.split(" ")
                     isi = text.replace(sep[0] + " ","")
                     translator = Translator()
@@ -2035,7 +2035,7 @@ def lineBot(op):
                 if msg.contentType == 0:
                     if msg.toType == 0:
                         if settings["responpm"] == True:
-                            sendMention(sender, sender, "hai", "saya sedang offline, PM nanti aja silahkan tinggalkan pesan di NOTE.")
+                            sendMention(sender, sender, "hai", "saya sedang offline, PM nanti aja silahkan tinggalkan pesan di NOTE\nterima kasih")
 #==============================================================================================================
                 if msg.contentType == 13:
                     if settings["checkContact"] == True:
