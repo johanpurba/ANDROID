@@ -70,9 +70,6 @@ sider = {
 }
 
 mulai = time.time()
-
-tz = pytz.timezone("Asia/Jakarta")
-timeNow = datetime.now(tz=tz)
 #==============================================================================================================
 myProfile = {
 	"displayName": "",
