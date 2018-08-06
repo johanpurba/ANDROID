@@ -590,7 +590,7 @@ def lineBot(op):
                         else:
                             temp_flood[receiver] = {
     	                        "time": time.time(),
-    	                        "flood": 0
+    	                        "flood": 0,
     	                        "expire": False
                             }
 
@@ -1308,7 +1308,7 @@ def lineBot(op):
                     hasil = translator.translate(isi, dest='et')
                     A = hasil.text
                     client.sendMessage(msg.to, A)
-                elif msg.text.lower().startswith("tr-fi ")
+                elif msg.text.lower().startswith("tr-fi "):
                     sep = text.split(" ")
                     isi = text.replace(sep[0] + " ","")
                     translator = Translator()
