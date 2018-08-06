@@ -49,6 +49,7 @@ squareChatMid='mdbd283c4f8e1840fbcecf1e0e0fd9288'
 #helpUnmute = """I'll be here when you need me"""
 #==============================================================================================================
 msg_dict = {}
+msg_dict1 = {}
 msg_image={}
 msg_video={}
 msg_sticker={}
@@ -67,6 +68,11 @@ sider = {
   "cyduk":{},
   "sidermem":{}
 }
+
+mulai = time.time()
+
+tz = pytz.timezone("Asia/Jakarta")
+timeNow = datetime.now(tz=tz)
 #==============================================================================================================
 myProfile = {
 	"displayName": "",
@@ -212,17 +218,16 @@ def command(text):
 helpmsg ="""
 ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗
 ╠Me/.me
-╠mycon
-╠mymid
-╠mystatus
-╠myprofile
+╠mycon/cover/pict/vid
+╠mymid/profile
+╠myname/status
 ╠updatename/bio 「text」
 ╠updatefoto/video
-╠myname
-╠mypict/vid
-╠mysticker「gift sticker 1」
+╠gift
+╠lokasi
+╠mysticker
 ╠contact 「mid nya」
-╠mycover
+╠wikipedia/timezone
 ╠id/idku「@」
 ╠sc/scku「@」
 ╠dn/nameku/name「@」
@@ -233,58 +238,58 @@ helpmsg ="""
 ╠myinfo/info「@」
 ╠unbanall「kosong」
 ╠idline「idLINE」
-╠gambar「text」
-╠image「text」
+╠gambar/image/video「text」
+╠newticket/ticket
 ╠clear/unban「pilih pesan」
 ╠lurking reset
-╠lurking
-╠anime「text」
-╠yt,top/news
-╠gbcast: 「broadcast group」
-╠ats,favoriteinfo,square「#」
+╠fight/motivate/motivation/quote
+╠cover/clone:add「@」clone-del
+╠yt,top/news/instagram/calc
+╠g/f/allbcast
+╠ats,favoriteinfo-list,square「#」
 ╠gcastvoice 「text」
 ╠crash,friendinfo,member,leave「#」
 ╠delete chat
 ╠bye 「Ruang kosong」
-╠checkmovie
+╠devianart/checkmovie
 ╠on 「runtime」
-╠gcreator
-╠asking 「text」
+╠gcreator/infogroup/groupinfo
+╠asking/gif/imageart 「text」
 ╠hello「nama」
-╠newticket
+╠getannounce/announclear
 ╠invite:on「by contact」
-╠tag,mention/all/desah/jxxxxt
+╠tag,mention/all/desah/jxxxxt/?
 ╠open/closeqr,ginfo「#」
-╠itsme/about
+╠itsme/about/creepypasta
 ╠add/delban「@」
-╠unfriend「@」
+╠tag [jumlah]「@」
 ╠resetfriend/unfriendall
-╠reject「group」
-╠gpict
+╠clearinvie/reject「group」
+╠announce/allgroup/crash/cam
 ╠updategroup「foto grup」
-╠groupku/mygroup
+╠gpict/groupku/mygroup
 ╠infogroup/groupinfo
 ╠zodiac/ind/eng
 ╠friendlist/mem
-╠block「@」/blokir 
+╠block/unfriend「@」/blokir 
 ╠blocklist/listblock
 ╠today/kalender
 ╠baned「by contact」
 ╠delban「by contact」
-╠conban
+╠conban/banlist
 ╠blocklist/bl
-╠banlist
-╠cekban
-╠status
+╠sendfile/calc/suggestion
+╠cekban/checkblock
+╠status/1cak/raffle-2
 ╠close/curl
 ╠open/ourl
 ╠Spam on|num|text
 ╠gname「nama group」
 ╠gcall「nomor」
-╠that「mention @」jumlah
-╠namemiid「jumlah」spam
-╠gift「gift @」
-╠virus「mention @ 
+╠virus「jumlah」@
+╠gift「jumlah」@
+╠clearinvites/rejectall-z
+╠guess/flipacoin/bitcoin
 ╠kick「@」target
 ╠Nk「@」target
 ╠coba「@」target
@@ -499,7 +504,7 @@ def lineBot(op):
                     spkg = msgSticker["STKPKGID"]
                     sver = msgSticker["STKVER"]
                     sendSticker(op.param1, sver, spkg, sid)
-                sendMention(op.param1, op.param2, "telah meninggal kan", "{}".format(str(settings['leavePesan'])))
+                sendMention(op.param1, op.param2, "telah meninggal kan kita", "{}".format(str(settings['leavePesan'])))
 
         if op.type == 17:
             print ("[ 17 ]  NOTIFIED ACCEPT GROUP INVITATION")
@@ -585,7 +590,7 @@ def lineBot(op):
                         else:
                             temp_flood[receiver] = {
     	                        "time": time.time(),
-    	                        "flood": 0,
+    	                        "flood": 0
     	                        "expire": False
                             }
 
@@ -673,7 +678,7 @@ def lineBot(op):
                 elif text.lower() == "author" or text.lower() == ".":
                     helpaut = helpauthor
                     client.sendMessage(to, str(helpaut))
-                elif text.lower() == "bio" or text.lower() == ".":
+                elif text.lower() == "helpbio" or text.lower() == ".":
                     helpio = helpbio
                     client.sendMessage(to, str(helpio))
                 elif text.lower() == "spaming" or text.lower() == ".":
@@ -2093,7 +2098,7 @@ def lineBot(op):
                             settings["restartPoint"] = to
                             restartBot()
                         elif cmd == "me" or cmd == "tes":
-                            client.sendMentionFooter(to, '「ini aku」\n', sender, "https://line.me/ti/p/~calon_almarhum99", "http://dl.profile.line-cdn.net/"+client.getContact(sender).pictureStatus, client.getContact(sender).displayName);client.sendMessage(to, client.getContact(sender).displayName, contentMetadata = {'previewUrl': 'http://dl.profile.line-cdn.net/'+client.getContact(sender).pictureStatus, 'i-installUrl': 'https://line.me/ti/p/~calon_almarhum99', 'type': 'mt', 'subText': "ᴄᴀʟᴏɴ ᴀʟᴍᴀʀʜᴜᴍ™", 'a-installUrl': 'https://line.me/ti/p/~calon_almarhum99', 'a-installUrl': ' https://line.me/ti/p/~calon_almarhum99', 'a-packageName': 'com.spotify.music', 'countryCode': 'ID', 'a-linkUri': 'https://line.me/ti/p/~calon_almarhum99', 'i-linkUri': 'https://line.me/ti/p/~calon_almarhum99', 'id': 'mt000000000a6b79f9', 'text': 'ᴀʜʟɪ ᴋᴜʙᴜʀ™', 'linkUri': 'https://line.me/ti/p/~calon_almarhum99'}, contentType=19)
+                            client.sendMentionFooter(to, '「Me」\n', sender, "https://line.me/ti/p/~calon_almarhum99", "http://dl.profile.line-cdn.net/"+client.getContact(sender).pictureStatus, client.getContact(sender).displayName);client.sendMessage(to, client.getContact(sender).displayName, contentMetadata = {'previewUrl': 'http://dl.profile.line-cdn.net/'+client.getContact(sender).pictureStatus, 'i-installUrl': 'https://line.me/ti/p/~calon_almarhum99', 'type': 'mt', 'subText': "ᴄᴀʟᴏɴ ᴀʟᴍᴀʀʜᴜᴍ™", 'a-installUrl': 'https://line.me/ti/p/~calon_almarhum99', 'a-installUrl': ' https://line.me/ti/p/~calon_almarhum99', 'a-packageName': 'com.spotify.music', 'countryCode': 'ID', 'a-linkUri': 'https://line.me/ti/p/~calon_almarhum99', 'i-linkUri': 'https://line.me/ti/p/~calon_almarhum99', 'id': 'mt000000000a6b79f9', 'text': 'ᴀʜʟɪ ᴋᴜʙᴜʀ™', 'linkUri': 'https://line.me/ti/p/~calon_almarhum99'}, contentType=19)
                         elif cmd == "aku":
                             userid = "https://line.me/ti/p/~" + client.profile.userid
                             client.sendImageWithFooter(to, "http://dl.profile.line-cdn.net/"+client.getContact(sender).pictureStatus, str(userid), "http://dl.profile.line-cdn.net/"+client.getContact(sender).pictureStatus, client.getContact(sender).displayName)
@@ -2132,7 +2137,7 @@ def lineBot(op):
                         elif cmd == "updatefoto":
                             settings["changePicture"] = True
                             sendMention(to, sender, "「 Successfully converted」\n•", "\nSend pict !")
-                        elif cmd == "upvideo" and sender == clientMID:
+                        elif cmd == "updatevideo" and sender == clientMID:
                             settings['changeProfileVideo']['status'] = True
                             settings['changeProfileVideo']['stage'] = 1
                             sendMention(to, sender, "「 Successfully complete the video. 」\n•", "\nSend video !")
@@ -2358,7 +2363,7 @@ def lineBot(op):
                             a = cmd.replace("abroadcast", "")
                             cond = a.split("|")
                             if len(cond) == 1:
-                                link = "https://line.me/ti/p/~gg880."
+                                link = "https://line.me/ti/p/~ketikidmu111"
                             else:
                                 link = cond[1]
                             group = client.groups
@@ -2695,7 +2700,7 @@ def lineBot(op):
                                 client.inviteIntoGroupCall(to, contactIds=members)
                             else:
                                 client.sendMessage(to, "i am a lonely person".format(str(jml)))
-                        elif cmd.startswith("that "):
+                        elif cmd.startswith("tag "):
                             sep = text.split(" ")
                             text = text.replace(sep[0] + " ","")
                             cond = text.split(" ")
@@ -2786,9 +2791,9 @@ def lineBot(op):
                             for friend in friends:
                                 client.sendMessage(friend, "「 Broadcasted 」\n{}".format(str(txt)))
                             client.sendMessage(to, "Succes Broadcasted to {} Friends".format(str(len(friends))))
-                        elif cmd.startswith("all bcast "):
+                        elif cmd.startswith("allbcast "):
                             try:
-                                message = cmd.replace("all broadcast ","")
+                                message = cmd.replace("allbcast ","")
                                 friends = client.friends
                                 groups = client.groups
                                 favorites = client.getFavoriteMids()
@@ -2829,7 +2834,7 @@ def lineBot(op):
                                 if hr == day[i]: hasil = hari[i]
                             for k in range(0, len(bulan)):
                                 if bln == str(k): bln = bulan[k-1]
-                            anu = hasil + ", " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nเวลา : 「 " + timeNow.strftime('%H:%M:%S') + " 」"
+                            anu = hasil + ", " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nJam : 「 " + timeNow.strftime('%H:%M:%S') + " 」"
                             client.sendMessage(to, anu)
                         elif cmd == "delete chat":
                             client.removeAllMessages(op.param2)
@@ -2918,7 +2923,7 @@ def lineBot(op):
                                     if hr == day[i]: hasil = hari[i]
                                 for k in range(0, len(bulan)):
                                     if bln == str(k): bln = bulan[k-1]
-                                readTime = hasil + ", " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nเวลา : 「 " + timeNow.strftime('%H:%M:%S') + " 」"
+                                readTime = hasil + ", " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nJam : 「 " + timeNow.strftime('%H:%M:%S') + " 」"
                                 if msg.to in read['readPoint']:
                                         try:
                                             del read['readPoint'][msg.to]
@@ -2959,7 +2964,7 @@ def lineBot(op):
                                     if hr == day[i]: hasil = hari[i]
                                 for k in range(0, len(bulan)):
                                     if bln == str(k): bln = bulan[k-1]
-                                readTime = hasil + ", " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nformat : 「 " + timeNow.strftime('%H:%M:%S') + " 」"
+                                readTime = hasil + ", " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nJam : 「 " + timeNow.strftime('%H:%M:%S') + " 」"
                                 if msg.to not in read['readPoint']:
                                     client.sendMessage(msg.to,"Lurking already off")
                                 else:
@@ -2982,7 +2987,7 @@ def lineBot(op):
                                     if hr == day[i]: hasil = hari[i]
                                 for k in range(0, len(bulan)):
                                     if bln == str(k): bln = bulan[k-1]
-                                readTime = hasil + ", " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nformat : 「 " + timeNow.strftime('%H:%M:%S') + " 」"
+                                readTime = hasil + ", " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nJam : 「 " + timeNow.strftime('%H:%M:%S') + " 」"
                                 if msg.to in read["readPoint"]:
                                     try:
                                         read["readPoint"][msg.to] = True
@@ -3006,7 +3011,7 @@ def lineBot(op):
                                     if hr == day[i]: hasil = hari[i]
                                 for k in range(0, len(bulan)):
                                     if bln == str(k): bln = bulan[k-1]
-                                readTime = hasil + ", " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nformat : 「 " + timeNow.strftime('%H:%M:%S') + " 」"
+                                readTime = hasil + ", " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nJam : 「 " + timeNow.strftime('%H:%M:%S') + " 」"
                                 if receiver in read['readPoint']:
                                     if read["ROM"][receiver].items() == []:
                                         client.sendMessage(receiver,"[ Reader ]:\nNone")
@@ -3037,7 +3042,7 @@ def lineBot(op):
                                 else:
                                     client.sendMessage(receiver,"lurking on dulu bos")
 #==============================================================================================================
-                        elif cmd == "mysticker" or cmd == " gift sticker 1":
+                        elif cmd == "mysticker" or cmd == "sticker saya":
                             a = int("1")
                             b = int("1000")
                             c = str("EN")
@@ -3052,7 +3057,7 @@ def lineBot(op):
                             ret_ += "\n\n「 total {} tikel 」".format(str(len(jmlh)))
                             client.sendMessage(to, str(ret_),contentMetadata = {'AGENT_ICON': 'http://dl.profile.line-cdn.net/'+client.getContact(clientMID).pictureStatus, 'AGENT_NAME': 'MY STICKERS', 'AGENT_LINK': 'http://line.me/ti/p/~yukie2k18'})
 
-                        elif cmd == "announclear" or cmd == " gift sticker 1":
+                        elif cmd == "announclear" or cmd == "clearannoun":
                             a = client.getChatRoomAnnouncements(to)
                             client.sendMessage(to,"Announce cleared from group.")
                             try:
@@ -3075,13 +3080,13 @@ def lineBot(op):
                             sider['point'][receiver] = msg.id
                             sider['sidermem'][receiver] = ""
                             sider['cyduk'][receiver]=True
-                            client.sendMessage(receiver, "ehemmmmmm....")
+                            client.sendMessage(receiver, "readers detect on ready")
                         elif cmd == "cyduk off" or cmd == "cek sider:off":
                             if msg.to in sider['point']:
                                 sider['cyduk'][receiver]=False
                                 client.sendMessage(receiver, sider['sidermem'][msg.to])
                             else:
-                                client.sendMessage(receiver, "wkwkwk....")
+                                client.sendMessage(receiver, "ketik「cyduk on」terlebih dahulu")
 #==============================================================================================================
                         elif cmd == "status":
                             md = "╔▬▬▬▬ ꜱᴇᴛᴛɪɴɢꜱ ▬▬▬▬╗\n"
@@ -3192,10 +3197,10 @@ def lineBot(op):
                             client.sendMessage(to, "automatis block contact diaktifkan")
                         elif cmd == "notag on":
                             settings["notag"] = True
-                            client.sendMessage(to, "ini diaktifkan")
+                            client.sendMessage(to, "mode tag-kick telah diaktifkan")
                         elif cmd == "notag off":
                             settings["notag"] = False
-                            client.sendMessage(to, "ini dinonaktifkan")
+                            client.sendMessage(to, "mode tag-kick telah dinonaktifkan")
                         elif cmd == "leavemessage on":
                             settings["leaveMessage"] = True
                             client.sendMessage(to, "respon message diaktifkan")
@@ -3214,7 +3219,7 @@ def lineBot(op):
                         elif cmd == "sleepmode off":
                             settings["autoReply"] = False
                             client.sendMessage(to, "Success deactived Sleep Mode")
-                        elif cmd == "secret on":
+                        elif cmd == "read on":
                             settings["getReader"][receiver] = []
                             client.sendMessage(to, "open secret read to detect on")
                         elif cmd == "autocancel on":
@@ -3223,16 +3228,16 @@ def lineBot(op):
                         elif cmd == "autocancel off":
                             settings["botcancel"] = False
                             client.sendMessage(to, "AutoRead has been disabled")
-                        elif cmd == "secret off":
+                        elif cmd == "read off":
                             if receiver in settings["getReader"]:
                                 del settings["getReader"][receiver]
                                 client.sendMessage(to, "close secret read to detect on")
-                        elif cmd == "kickoff up" or cmd == "/nosticker:0":
+                        elif cmd == "stickerkick on" or cmd == "/nosticker:0":
                                 settings["sticker"] = True
-                                client.sendMessage(to,"open up stickernya diaktifkan")
-                        elif cmd == "kickoff down" or cmd == "/nosticker:1":
+                                client.sendMessage(to,"auto kick sticker chat diaktifkan")
+                        elif cmd == "stickerkick off" or cmd == "/nosticker:1":
                                 settings["sticker"] = False
-                                client.sendMessage(to,"open down sticker dinonaktifkan")
+                                client.sendMessage(to,"auto kick sticker chat dinonaktifkan")
                         elif cmd == "sleepmode":
                             if settings["replyPesan"] is not None:
                                 client.sendMessage(to,"Your Sleepmode is : " + str(settings["replyPesan"]))
@@ -4207,8 +4212,8 @@ def lineBot(op):
                             try:
                                 arr = []
                                 owner = "u31d8aba9dff04c75242f2a2097b8adae"
-                                khietag = "u9f478c580a9c4e1de5e407e9b10c2da1"                        
-             #                   creator = client.getContact(owner)
+                                phietag = "u9f478c580a9c4e1de5e407e9b10c2da1"                        
+                                creator = client.getContact(owner)
                                 contact = client.getContact(clientMID)
                                 grouplist = client.getGroupIdsJoined()
                                 contactlist = client.getAllContactIds()
@@ -4223,7 +4228,7 @@ def lineBot(op):
                                 ret_ += "\n👑 Bot Version ➣ V.03"
                                 ret_ += "\n👑 CREATOR ➣ @!              " #.format(creator.displayName)
    #                             client.sendMessage(to, str(ret_))
-                                khieMention(to, str(ret_),[khietag])
+                                clientMention(to, str(ret_),[phietag])
                             except Exception as error:
                                 client.sendMessage(to, "「 Result Error 」\n" + str(error))
                         elif cmd == 'square' or cmd == ' squares':
@@ -4383,7 +4388,7 @@ def lineBot(op):
                                 client.sendContact(to,conn.mid)
                         elif cmd.startswith("gcastvoice "):
                                 bctxt = cmd.replace("gcastvoice ", "")
-                                bc = ("Broadcast voice by khie")
+                                bc = ("Broadcast voice by phie")
                                 cb = (bctxt + bc)
                                 tts = gTTS(cb, lang='th', slow=False)
                                 tts.save('tts.mp3')
@@ -4392,7 +4397,7 @@ def lineBot(op):
                                     client.sendAudio(manusia, 'tts.mp3')
                         elif cmd.startswith("fdcastvoice "):
                                 bctxt = cmd.replace("fdcastvoice ", "")
-                                bc = ("Broadcast voice by khie")
+                                bc = ("Broadcast voice by phie")
                                 cb = (bctxt + bc)
                                 tts = gTTS(cb, lang='id', slow=False)
                                 tts.save('tts.mp3')
