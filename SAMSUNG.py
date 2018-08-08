@@ -213,18 +213,70 @@ def command(text):
     return cmd
 #==============================================================================================================
 helpmsg ="""
+╔▬▬▬▬self
+╠▬▬▬▬fiture
+╠▬▬▬▬clone
+╠▬▬▬▬steal
+╠▬▬▬▬group
+╠▬▬▬▬settings
+╠▬▬▬▬translate
+╠▬▬▬▬music
+╠▬▬▬▬bio
+╠▬▬▬▬spam
+╚▬▬▬▬steal
+"""
+helpgroup ="""
+╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗
+╠unbanall「kosong」
+╠clear/unban「pilih pesan」
+╠bye 「Ruang kosong」
+╠on 「runtime」
+╠invite:on「by contact」
+╠add/delban「@」
+╠resetfriend/unfriendall
+╠clearinvie/reject「group」
+╠block/unfriend「@」/blokir 
+╠blocklist/listblock
+╠baned「by contact」
+╠delban「by contact」
+╠conban/banlist
+╠blocklist/bl
+╠cekban/checkblock
+╠clearinvites/rejectall-z
+╠kick「@」target
+╠Nk「@」target
+╠coba「@」target
+╠siap「@」target
+╠tidur「@」target
+╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝
+"""
+helpsfiture ="""
+╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗
+╠today/kalender
+╠lokasi
+╠devianart/checkmovie
+╠asking/gif/imageart 「text」
+╠itsme/about/creepypasta
+╠wikipedia/timezone
+╠guess/flipacoin/bitcoin
+╠sendfile/calc/suggestion
+╠fight/motivate/motivation/quote
+╠zodiac/ind/eng
+╠gambar/image/video「text」
+╠yt,top/news/instagram/calc
+╠status/1cak/raffle-2
+╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝
+"""
+helpsteal ="""
 ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗
 ╠Me/.me
+╠mysticker
+╠idline「idLINE」
+╠newticket/ticket
 ╠mycon/cover/pict/vid
+╠contact 「mid nya」
 ╠mymid/profile
 ╠myname/status
-╠updatename/bio 「text」
-╠updatefoto/video
-╠gift
-╠lokasi
-╠mysticker
-╠contact 「mid nya」
-╠wikipedia/timezone
 ╠id/idku「@」
 ╠sc/scku「@」
 ╠dn/nameku/name「@」
@@ -233,71 +285,47 @@ helpmsg ="""
 ╠vidku/vid「@」
 ╠coverku/cover「@」
 ╠myinfo/info「@」
-╠unbanall「kosong」
-╠idline「idLINE」
-╠gambar/image/video「text」
-╠newticket/ticket
-╠clear/unban「pilih pesan」
-╠lurking reset
-╠fight/motivate/motivation/quote
-╠cover/clone:add「@」clone-del
-╠yt,top/news/instagram/calc
-╠g/f/allbcast
-╠ats,favoriteinfo-list,square「#」
-╠gcastvoice 「text」
-╠crash,friendinfo,member,leave「#」
-╠delete chat
-╠bye 「Ruang kosong」
-╠devianart/checkmovie
-╠on 「runtime」
 ╠gcreator/infogroup/groupinfo
-╠asking/gif/imageart 「text」
-╠hello「nama」
-╠getannounce/announclear
-╠invite:on「by contact」
-╠tag,mention/all/desah/jxxxxt/?
-╠open/closeqr,ginfo「#」
-╠itsme/about/creepypasta
-╠add/delban「@」
-╠tag [jumlah]「@」
-╠resetfriend/unfriendall
-╠clearinvie/reject「group」
-╠announce/allgroup/crash/cam
-╠updategroup「foto grup」
 ╠gpict/groupku/mygroup
-╠infogroup/groupinfo
-╠zodiac/ind/eng
 ╠friendlist/mem
-╠block/unfriend「@」/blokir 
-╠blocklist/listblock
-╠today/kalender
-╠baned「by contact」
-╠delban「by contact」
-╠conban/banlist
-╠blocklist/bl
-╠sendfile/calc/suggestion
-╠cekban/checkblock
-╠status/1cak/raffle-2
+╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝
+"""
+helpclone ="""
+╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗
 ╠close/curl
 ╠open/ourl
-╠Spam on|num|text
+╠clone:add「@」clone-del
+╠updatename/bio 「text」
+╠updatefoto/video
 ╠gname「nama group」
-╠gcall「nomor」
-╠virus「jumlah」@
-╠gift「jumlah」@
-╠clearinvites/rejectall-z
-╠guess/flipacoin/bitcoin
-╠kick「@」target
-╠Nk「@」target
-╠coba「@」target
-╠siap「@」target
-╠tidur「@」target
+╠updategroup「foto grup」
 ╠mimicadd/del「@」
 ╠mimiclist
 ╠mimic on/off
-╠unsend 「jumlah」
 ╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝
-╠pengaturan:
+"""
+helpspam ="""
+╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗
+╠delete chat
+╠gift
+╠Spam on|num|text
+╠unsend 「jumlah」
+╠gift「jumlah」@
+╠virus「jumlah」@
+╠gcall「nomor」
+╠tag [jumlah]「@」
+╠hello「nama」
+╠g/f/allbcast
+╠tag,mention/all/desah/jxxxxt/?
+╠gcastvoice 「text」
+╠ats,favoriteinfo-list,square「#」
+╠open/closeqr,ginfo「#」
+╠announce/allgroup/crash/cam
+╠getannounce/announclear
+╠crash,friendinfo,member,leave「#」
+╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝
+"""
+helpset ="""
 ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗
 ╠checkcontact on/off
 ╠detailuser on/off
@@ -313,22 +341,24 @@ helpmsg ="""
 ╠leavemessage on/off
 ╠notag on/off
 ╠check「sticker」 on/off
-╠kickoff up/down nosticker:0/1
+╠stickerkick on/off nosticker:0/1
 ╠cek sider:on/off
 ╠cyduk on/off
 ╠lurking on/off
-╠secret on/off
+╠read on/off
+╠lurking reset
 ╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝
-╠settings account:
+"""
+helpself ="""
 ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗
 ╠Read1「text」
 ╠Read2「text」
 ╠addreadsticker
 ╠delreadsticker
-╠setread:「responmessage reader」
+╠setread:「respmessage reader」
 ╠addresponsticker
 ╠delresponsticker
-╠setrespon/group:「responmessage」
+╠setrespon/group:「respmessage」
 ╠setpm:「text」
 ╠addautosticker
 ╠delautosticker
@@ -663,22 +693,22 @@ def lineBot(op):
                 elif text.lower() == "fiture" or text.lower() == ".":
                     helpftr = helpfiture
                     client.sendMessage(to, str(helpftr))
-                elif text.lower() == "update" or text.lower() == ".":
-                    helpup = helpupdate
-                    client.sendMessage(to, str(helpup))
+                elif text.lower() == "clone" or text.lower() == ".":
+                    helpcl = helpclone
+                    client.sendMessage(to, str(helpcl))
                 elif text.lower() == "group" or text.lower() == ".":
                     helpgc = helpgroup
                     client.sendMessage(to, str(helpgc))
                 elif text.lower() == "reader" or text.lower() == ".":
                     helprd = helpread
                     client.sendMessage(to, str(helprd))
-                elif text.lower() == "author" or text.lower() == ".":
-                    helpaut = helpauthor
-                    client.sendMessage(to, str(helpaut))
+                elif text.lower() == "steal" or text.lower() == ".":
+                    helpst = helpsteal
+                    client.sendMessage(to, str(helpst))
                 elif text.lower() == "helpbio" or text.lower() == ".":
                     helpio = helpbio
                     client.sendMessage(to, str(helpio))
-                elif text.lower() == "spaming" or text.lower() == ".":
+                elif text.lower() == "spam" or text.lower() == ".":
                     helpsp = helpspam
                     client.sendMessage(to, str(helpsp))
                 elif text.lower() == "settings" or text.lower() == ".":
