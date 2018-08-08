@@ -17,7 +17,7 @@ from googletrans import Translator
 botStart = time.time()
 #==============================================================================================================
 client = LINE ()
-#client = LINE ("EvnoQt73aUUOPRwX768e.mDIRQD+WthuKlYOGL7ITRG.cy49J+4X+aWgbm95G0/siCmet43lkOmKmPdnWKcukXU="")
+#client = LINE ("EvnoQt73aUUOPRwX768e.mDIRQD+WthuKlYOGL7ITRG.cy49J+4X+aWgbm95G0/siCmet43lkOmKmPdnWKcukXU=")
 #==============================================================================================================
 readOpen = codecs.open("read.json","r","utf-8")
 settingsOpen = codecs.open("temp.json","r","utf-8")
