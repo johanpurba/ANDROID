@@ -17,7 +17,7 @@ from googletrans import Translator
 botStart = time.time()
 #==============================================================================================================
 client = LINE ()
-#client = LINE ("EvnoQt73aUUOPRwX768e.mDIRQD+WthuKlYOGL7ITRG.cy49J+4X+aWgbm95G0/siCmet43lkOmKmPdnWKcukXU=")
+#client = LINE ("EvnoQt73aUUOPRwX768e.mDIRQD+WthuKlYOGL7ITRG.cy49J+4X+aWgbm95G0/siCmet43lkOmKmPdnWKcukXUX=")
 #==============================================================================================================
 readOpen = codecs.open("read.json","r","utf-8")
 settingsOpen = codecs.open("temp.json","r","utf-8")
@@ -192,17 +192,17 @@ def changeProfileVideo(to):
         settings['changeProfileVideo']['status'] = False
         client.updateProfilePicture(path_p, 'vp')
         
-def speedtest(วินาที):
-    นาที, วินาที = divmod(วินาที,60)
-    ชั่วโมง, นาที = divmod(นาที,60)
-    วัน, ชั่วโมง = divmod(ชั่วโมง,24)
-    อาทิตย์, วัน = divmod(วัน,7)
-    if วัน == 0:
-        return '%02d' % (วินาที)
-    elif วัน > 0 and อาทิตย์ == 0:
-        return '%02d' %(วินาที)
-    elif วัน > 0 and อาทิตย์ > 0:
-        return '%02d' %(วินาที)
+def speedtest(secs):
+    mins, secs = divmod(secs,60)
+    hours, mins = divmod(mins,60)
+    days, hours = divmod(hours,24)
+    weaks, days = divmod(days,7)
+    if days == 0:
+        return '%02d' % (secs)
+    elif days > 0 and weaks == 0:
+        return '%02d' %(secs)
+    elif days > 0 and weaks > 0:
+        return '%02d' %(secs)
 #==============================================================================================================
 def command(text):
     pesan = text.lower()
