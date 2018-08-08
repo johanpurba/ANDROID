@@ -223,8 +223,8 @@ helpmsg ="""
 ╠▬▬▬▬music
 ╠▬▬▬▬bio
 ╠▬▬▬▬spam
-╚▬▬▬▬steal
-"""
+╚▬▬▬▬steal"""
+
 helpgroup ="""
 ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗
 ╠unbanall「kosong」
@@ -248,9 +248,9 @@ helpgroup ="""
 ╠coba「@」target
 ╠siap「@」target
 ╠tidur「@」target
-╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝
-"""
-helpsfiture ="""
+╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝"""
+
+helpfiture ="""
 ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗
 ╠today/kalender
 ╠lokasi
@@ -265,8 +265,8 @@ helpsfiture ="""
 ╠gambar/image/video「text」
 ╠yt,top/news/instagram/calc
 ╠status/1cak/raffle-2
-╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝
-"""
+╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝"""
+
 helpsteal ="""
 ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗
 ╠Me/.me
@@ -288,8 +288,8 @@ helpsteal ="""
 ╠gcreator/infogroup/groupinfo
 ╠gpict/groupku/mygroup
 ╠friendlist/mem
-╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝
-"""
+╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝"""
+
 helpclone ="""
 ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗
 ╠close/curl
@@ -302,8 +302,8 @@ helpclone ="""
 ╠mimicadd/del「@」
 ╠mimiclist
 ╠mimic on/off
-╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝
-"""
+╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝"""
+
 helpspam ="""
 ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗
 ╠delete chat
@@ -323,8 +323,8 @@ helpspam ="""
 ╠announce/allgroup/crash/cam
 ╠getannounce/announclear
 ╠crash,friendinfo,member,leave「#」
-╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝
-"""
+╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝"""
+
 helpset ="""
 ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗
 ╠checkcontact on/off
@@ -347,8 +347,8 @@ helpset ="""
 ╠lurking on/off
 ╠read on/off
 ╠lurking reset
-╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝
-"""
+╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝"""
+
 helpself ="""
 ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗
 ╠Read1「text」
@@ -369,8 +369,8 @@ helpself ="""
 ╠addwelcomesticker
 ╠delwelcomesticker
 ╠setwelcome:「responmem join」
-╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝
-"""
+╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝"""
+
 helpmusic ="""「 Music 」
 
 • Key:  Music「query」
