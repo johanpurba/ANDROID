@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*- 
-import linepy
-from linepy import *
-from akad.ttypes import *
+import Linephu.linepy
+from Linephu.linepy import *
+from Linephu.akad.ttypes import Message
+from Linephu.akad.ttypes import ContentType as Type
+from Linephu.akad.ttypes import ChatRoomAnnouncementContents
+from Linephu.akad.ttypes import ChatRoomAnnouncement
 from multiprocessing import Pool, Process
 from googletrans import Translator
 from time import sleep
