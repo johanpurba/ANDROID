@@ -31,11 +31,11 @@ class Config(object):
     APP_TYPE    = "CHROMEOS\t2.1.0\tCHROMEOS\t10.0.0"
     APP_VER     = '8.9.1'
     CARRIER     = '51089, 1-0'
-    SYSTEM_NAME = 'CHROMEOS'
+    SYSTEM_NAME = 'PH-13'
     SYSTEM_VER  = '10.12.0'
     IP_ADDR     = '8.8.8.8'
     EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
 
     def __init__(self):
-        self.APP_NAME = 'CHROMEOS\t2.1.0\tCHROMEOS\t10.0.0'
+        self.APP_NAME = 'CHROMEOS\t2.1.0\tPH-13\t10.0.0'
         self.USER_AGENT = 'Line/%s' % self.APP_VER
