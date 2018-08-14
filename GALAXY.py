@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from LineAPI.akad.ttypes import Message
-from LineAPI.akad.ttypes import ContentType as Type
-from LineAPI.akad.ttypes import ChatRoomAnnouncementContents
+from Linephu.akad.ttypes import Message
+from Linephu.akad.ttypes import ContentType as Type
+from Linephu.akad.ttypes import ChatRoomAnnouncementContents
 from datetime import datetime, timedelta
 from time import sleep
 from bs4 import BeautifulSoup
@@ -13,7 +13,7 @@ from io import StringIO
 from multiprocessing import Pool
 from googletrans import Translator
 from urllib.parse import urlencode
-#from wikiapi import WikiApi
+from wikiapi import WikiApi
 import subprocess as cmd
 import time, random, sys, json, codecs, threading, glob, re, string, os, requests, six, ast, pytz, wikipedia, urllib, urllib.parse, atexit, asyncio, traceback
 _session = requests.session()
