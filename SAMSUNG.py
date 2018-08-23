@@ -17,7 +17,7 @@ from googletrans import Translator
 botStart = time.time()
 #==============================================================================================================
 client = LINE ()
-#client = LINE ("EvnoQt73aUUOPRwX768e.mDIRQD+WthuKlYOGL7ITRG.cy49J+4X+aWgbm95G0/siCmet43lkOmKmPdnWKcukXUX=")
+#client = LINE ("EwcQCTXIPLsANsbimgib.Sp/s6yipA4kI8lGDz1Jc/W.WBwQU7uzoEjoERpm4HeW/4vtWuHeGvGt7lNGir3ElX0=")
 #==============================================================================================================
 readOpen = codecs.open("read.json","r","utf-8")
 settingsOpen = codecs.open("temp.json","r","utf-8")
@@ -213,17 +213,16 @@ def command(text):
     return cmd
 #==============================================================================================================
 helpmsg ="""
-╔▬▬▬▬self
-╠▬▬▬▬fiture
-╠▬▬▬▬clone
-╠▬▬▬▬steal
-╠▬▬▬▬group
-╠▬▬▬▬settings
-╠▬▬▬▬translate
-╠▬▬▬▬music
-╠▬▬▬▬bio
-╠▬▬▬▬spam
-╚▬▬▬▬steal"""
+╔▬▬▬▬ self
+╠▬▬▬▬ fiture
+╠▬▬▬▬ clone
+╠▬▬▬▬ group
+╠▬▬▬▬ settings
+╠▬▬▬▬ translate
+╠▬▬▬▬ music
+╠▬▬▬▬ bio
+╠▬▬▬▬ spam
+╚▬▬▬▬ steal"""
 
 helpgroup ="""
 ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗
@@ -4239,7 +4238,7 @@ def lineBot(op):
                             try:
                                 arr = []
                                 owner = "u31d8aba9dff04c75242f2a2097b8adae"
-                                phietag = "u9f478c580a9c4e1de5e407e9b10c2da1"                        
+                                phietag = "ub0ff92e9820f6b82a2f0b81d6758c2fb"                        
                                 creator = client.getContact(owner)
                                 contact = client.getContact(clientMID)
                                 grouplist = client.getGroupIdsJoined()
