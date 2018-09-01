@@ -84,6 +84,22 @@ class Talk(object):
         return self.sendMessage(to, text, contentMetadata)
         
     @loggedIn
+    def mentionWithRFU(self, to, mid, firstmessage, lastmessage):
+        try:
+            arrData = ""
+            text = "%s " %(str(firstmessage))
+            arr = []
+            mention = "@PH-13 "
+            slen = str(len(text))
+            elen = str(len(text) + len(mention) - 1)
+            arrData = {'S':slen, 'E':elen, 'M':mid}
+            arr.append(arrData)
+            text += mention + str(lastmessage)
+            self.sendMessage(to,text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+        except Exception as error:
+            print(error)
+            
+    @loggedIn
     def sendMention(self,to, text="",ps='', mids=[]):
         arrData = ""
         arr = []
@@ -159,6 +175,34 @@ class Talk(object):
             i=i+1
         contentMetadata={'MENTION':str('{"MENTIONEES":' + json.dumps(arr).replace(' ','') + '}')}
         return self.sendMessage(to, text, contentMetadata)
+    
+    @loggedIn
+    def mention(self, to, nama):
+        aa = ""
+        bb = ""
+        strt = int(0)
+        akh = int(0)
+        nm = nama
+        myid = self.talk.getProfile().mid
+        if myid in nm:
+            nm.remove(myid)
+        for mm in nm:
+          akh = akh + 6
+          aa += """{"S":"""+json.dumps(str(strt))+""","E":"""+json.dumps(str(akh))+""","M":"""+json.dumps(mm)+"},"""
+          strt = strt + 7
+          akh = akh + 1
+          bb += "@nrik \n"
+        aa = (aa[:int(len(aa)-1)])
+        text = bb
+        try:
+            msg = Message()
+            msg.to = to
+            msg.text = text
+            msg.contentMetadata = {'MENTION':'{"MENTIONEES":['+aa+']}'}
+            msg.contentType = 0
+            self.talk.sendMessage(0, msg)
+        except Exception as error:
+           print(error, str(error))
 
     @loggedIn
     def sendSticker(self, to, version, packageId, stickerId):
