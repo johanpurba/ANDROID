@@ -1,0 +1,129 @@
+{
+    "addPesan": "Terima kasih telah menambahkan saya sebagai teman ,sudah ku addback lho\nsalam kenal ya..",
+    "addSticker": {
+        "name": "",
+        "status": false
+    },
+    "anu": "Secret",
+    "anu2": "Very Secret",
+    "autoAdd": true,
+    "autoBlock": false,
+    "autoCancel": {
+        "members": 3,
+        "on": true
+    },
+    "autoJoin": false,
+    "autoJoinTicket": false,
+    "autoLeave": false,
+    "autoRead": false,
+    "autoReply": false,
+    "blacklist": {},
+    "botcancel": false,
+    "changeGroupPicture": [],
+    "changePicture": false,
+    "changeProfileVideo": {
+        "picture": "tmp/pict.bin",
+        "stage": 2,
+        "status": true,
+        "video": "/tmp/linepy-1528384030-7.bin"
+    },
+    "changeVideo": false,
+    "chatMessage": "dih",
+    "checkContact": false,
+    "checkSticker": false,
+    "dblacklist": false,
+    "detectMention": false,
+    "detectMentionPM": false,
+    "dwhitelist": false,
+    "getReader": {
+        "c42edf50a648e40727e426b81a9a83acf": []
+    },
+    "keyCommand": "",
+    "leaveMessage": false,
+    "leavePesan": "\n╔▬▬▬▬▬▬▬▬▬▬▬▬▬╗\n🙏innalillahi wa inalillahirojiun..🙏\n╚▬▬▬▬▬▬▬▬▬▬▬▬▬╝\n╔▬▬▬▬▬▬▬▬▬▬▬▬▬╗\n selamat jalan teman y sahabatku\n╚▬▬▬▬▬▬▬▬▬▬▬▬▬╝\n╔▬▬▬▬▬▬▬▬▬▬▬▬▬╗\n semoga kau tenang disna ,amiin.\n╚▬▬▬▬▬▬▬▬▬▬▬▬▬╝\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬",
+    "mentionPesan": " heh? ada apa kok ngeTag ,jawab.,.",
+    "messageSticker": {
+        "addName": null,
+        "addStatus": false,
+        "listSticker": {
+            "addSticker": {
+                "STKID": "51626498",
+                "STKPKGID": "11538",
+                "STKVER": "1"
+            },
+            "leaveSticker": {
+                "STKID": "12435416",
+                "STKPKGID": "6817",
+                "STKVER": "3"
+            },
+            "readerSticker": {
+                "STKID": "12435416",
+                "STKPKGID": "6817",
+                "STKVER": "3"
+            },
+            "responSticker": {
+                "STKID": "12435416",
+                "STKPKGID": "6817",
+                "STKVER": "3"
+            },
+            "sleepSticker": null,
+            "welcomeSticker": {
+                "STKID": "51626496",
+                "STKPKGID": "11538",
+                "STKVER": "1"
+            }
+        }
+    },
+    "mimic": {
+        "copy": false,
+        "status": false,
+        "target": {}
+    },
+    "notag": false,
+    "pcancel": false,
+    "pinvite": false,
+    "pmMessage": "ada apa ya kok ngetag di ROOM aku ada disini lho.\n\n╔════╗╔════\n║▓▓▓█║║▓▓▓█\n║▓▓▓█║║▓▓▓█\n║▓▓▓█╚╝▓▓▓█\n║▓▓▓▓▓▓▓▓▓█\n║▓▓▓▓▓▓▓▓▓█\n║▓▓▓█╔╗▓▓▓█\n║▓▓▓█║║▓▓▓█\n║▓▓▓█║║▓▓▓█\n╚╦═══╝╚═══\n╔╝▓▓▓▓▓▓▓█\n║▓▓▓▓▓▓▓▓▓█\n║▓▓▓█╔╗▓▓▓█\n║▓▓▓█╚╝▓▓▓█\n║▓▓▓▓▓▓▓▓▓█\n║▓▓▓▓▓▓▓▓▓█\n║▓▓▓█╔╗▓▓▓█\n║▓▓▓█║║▓▓▓█\n╠════╝╚══\n║▓▓▓▓▓▓▓█\n║▓▓▓▓▓▓▓▓█\n║▓▓▓█║▓▓▓▓█\n║▓▓▓█╚╗▓▓▓█\n║▓▓▓█╔╝▓▓▓█\n║▓▓▓█║▓▓▓▓█\n║▓▓▓▓▓▓▓▓█\n║▓▓▓▓▓▓▓█\n╩╦══════\n═║▓▓▓▓▓█\n═║▓▓▓▓▓█\n═╚╗▓▓▓█\n══║▓▓▓█\n══║▓▓▓█\n═╔╝▓▓▓█\n═║▓▓▓▓▓█\n═║▓▓▓▓▓█\n╔╩══════\n║▓▓▓▓▓▓▓▓█\n║▓▓▓█║▓▓▓▓█\n║▓▓▓█╠═▓▓▓█\n║▓▓▓█║▓▓▓█\n║▓▓▓▓▓▓▓█\n║▓▓▓█▓▓▓█\n║▓▓▓█║▓▓▓█\n║▓▓▓█╠╗▓▓▓█\n╚════╝╚═══",
+    "protect": false,
+    "qrp": false,
+    "readerPesan": " cie ngecheck room ,pelan2 aja scrollnya ya jgan sampe ada yg kelewatan..",
+    "replyPesan": "MAAF....\nSaya sedang tidak aktif ,silahkan tinggalkan pesan anda di NOTE.\nterima kasih atas perhatiannya...",
+    "responGc": true,
+    "responcall": false,
+    "responcallgc": false,
+    "responpm": false,
+    "restartBot": null,
+    "restartPoint": "c0c00788ee26afa13767d60429c542826",
+    "server": "VPS",
+    "sticker": false,
+    "timeRestart": "18000",
+    "unsendMessage": false,
+    "userAgent": [
+        "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (X11; U; Linux amd64; rv:5.0) Gecko/20100101 Firefox/5.0 (Debian)",
+        "Mozilla/5.0 (X11; U; Linux amd64; en-US; rv:5.0) Gecko/20110619 Firefox/5.0",
+        "Mozilla/5.0 (X11; Linux) Gecko Firefox/5.0",
+        "Mozilla/5.0 (X11; Linux x86_64; rv:5.0) Gecko/20100101 Firefox/5.0 FirePHP/0.5",
+        "Mozilla/5.0 (X11; Linux x86_64; rv:5.0) Gecko/20100101 Firefox/5.0 Firefox/5.0",
+        "Mozilla/5.0 (X11; Linux x86_64) Gecko Firefox/5.0",
+        "Mozilla/5.0 (X11; Linux ppc; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (X11; Linux AMD64) Gecko Firefox/5.0",
+        "Mozilla/5.0 (X11; FreeBSD amd64; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 6.2; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:5.0) Gecko/20110619 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 6.1; rv:6.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 6.1.1; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 5.2; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 5.1; U; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 5.1; rv:2.0.1) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 5.0; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 5.0; rv:5.0) Gecko/20100101 Firefox/5.0"
+    ],
+    "userMentioned": false,
+    "wblacklist": false,
+    "welcomeMessage": false,
+    "welcomePesan": " \n ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗\n 􀄃􀇡moon attracted􏿿ꜱᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ ʙᴜᴀᴛ ᴋᴀᴍᴜ􀄃􀇡moon attracted􏿿\n ╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝\n ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗\n ˢᵉˡᵃᵐᵃᵗ ᵈᵃᵗᵃⁿᵍ ᵃᵏᵃⁿ ᵈⁱᵃᵏʰⁱʳⁱ ˢᵉˡᵃᵐᵃᵗ ᵗⁱⁿᵍᵍᵃˡ\n ╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝\n ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗\n ᵏᵃᵐᵘ ᵇⁱˢᵃ ᵐᵉᵐⁱˡⁱᵏⁱ ᵃᵖᵃᵖᵘⁿ ʸᵍ ᵈⁱⁱⁿᵍⁱⁿᵏᵃⁿ ʲⁱᵏᵃ ᵏᵃᵐᵘ ᵐᵃᵐᵖᵘ ᵐᵉⁿᵍʰⁱˡᵃⁿᵍᵏᵃⁿ ˢᵘᵃᵗᵘ ᵏᵉʸᵃᵏⁱⁿᵃⁿ\n ╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝\n ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬╗\n ʙᴀʜᴡᴀ ᴛᴀᴋ ᴍᴜɴɢᴋɪɴ ᴍᴇɴᴅᴘᴀᴛᴋᴀɴʏᴀ\n ╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬╝\n ʷᵃʰᵃⁱ ʸᵍ ᵐᵃʰᵃ ᴸᴱᴹᴮᵁᵀ ᵐᵃⁿʲᵃᵏᵃⁿˡᵃʰ ʰᵃᵗⁱᵏᵘ\n ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬",
+    "whitelist": {},
+    "wlc": false,
+    "wwhitelist": false
+}
